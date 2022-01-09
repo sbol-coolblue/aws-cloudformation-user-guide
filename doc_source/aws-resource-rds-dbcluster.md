@@ -224,7 +224,7 @@ For more information, see [ IAM Database Authentication](https://docs.aws.amazon
 
 `Engine`  <a name="cfn-rds-dbcluster-engine"></a>
 The name of the database engine to be used for this DB cluster\.  
-Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\), and `aurora-postgresql`   
+Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(for MySQL 5\.7\-compatible or MySQL 8.0-compatible Aurora\), and `aurora-postgresql`   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -248,7 +248,7 @@ Limitations and requirements apply to some DB engine modes\. For more informatio
 The version number of the database engine to use\.  
 To list all of the available engine versions for `aurora` \(for MySQL 5\.6\-compatible Aurora\), use the following command:  
 `aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"`  
-To list all of the available engine versions for `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\), use the following command:  
+To list all of the available engine versions for `aurora-mysql` \(for MySQL 5\.7\-compatible or MySQL 8.0-compatible Aurora\), use the following command:  
 `aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"`  
 To list all of the available engine versions for `aurora-postgresql`, use the following command:  
 `aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"`  
